@@ -2,12 +2,12 @@ function bindCompassEvents() {
     navigator.compass.watchHeading(
         compassHeadingRetrieved,
         null, {
-            frequency: 100
+            frequency: 1000
         });
 }
 
 function compassHeadingRetrieved(heading) {
-    var sensorVizElement = $("#sensor");
+    var sensorVizElement = document.getElementById("sensor");
 
     var rotationStyleString = "rotate(" + -(heading.magneticHeading | 0) + "deg)"
 
@@ -15,5 +15,3 @@ function compassHeadingRetrieved(heading) {
     sensorVizElement.style.webkitTransform = rotationStyleString;
     sensorVizElement.style.transform = rotationStyleString;
 }
-
-bindCompassEvents();
