@@ -2,7 +2,7 @@
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectGuid>{ba2629ab-865f-4193-9b5a-f1da14946d6f}</ProjectGuid>
-    <ProjectName>CameraApp</ProjectName>
+    <ProjectName>AuraTeam</ProjectName>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -35,13 +35,13 @@
     <Content Include="kendo\styles\images\wp8_icons.png" />
     <Content Include="kendo\styles\images\wp8_inverseicons.png" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
-    <Content Include="scripts\app.js" />
-    <Content Include="scripts\compass.js" />
-    <Content Include="scripts\GetYear.js" />
-    <Content Include="scripts\login.js" />
-    <Content Include="scripts\maps.js" />
-    <Content Include="scripts\Todo.js" />
-    <Content Include="styles\images\avatar.png" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\compass.js" />
+    <Content Include="scripts\app\settings.js" />
+    <Content Include="scripts\lib\everlive.all.min.js" />
+    <Content Include="scripts\app\login.js" />
+    <Content Include="scripts\app\maps.js" />
+    <Content Include="scripts\app\Todo.js" />
     <Content Include="styles\images\icon-add%402x.png" />
     <Content Include="styles\images\icon-add.png" />
     <Content Include="styles\images\icon-adsf%402x.png" />
@@ -58,13 +58,13 @@
     <Content Include="styles\images\icon-password.png" />
     <Content Include="styles\images\icon-username%402x.png" />
     <Content Include="styles\images\icon-username.png" />
-    <Content Include="styles\images\logo-telerik_devcloud%402x.png" />
-    <Content Include="styles\images\logo-telerik_devcloud.png" />
+    <Content Include="styles\images\images.jpg" />
     <Content Include="styles\main.css" />
     <Content Include="views\compass.html" />
     <Content Include="views\gallery.html" />
     <Content Include="views\maps.html" />
     <Content Include="views\noApiKey.html" />
+    <Content Include="views\signupView.html" />
     <Content Include="views\ToDo.html" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +116,8 @@
     <Folder Include="kendo\styles\images\" />
     <Folder Include="Plugins\" />
     <Folder Include="scripts\" />
+    <Folder Include="scripts\lib\" />
+    <Folder Include="scripts\app\" />
     <Folder Include="styles\" />
     <Folder Include="styles\images\" />
     <Folder Include="views\" />
