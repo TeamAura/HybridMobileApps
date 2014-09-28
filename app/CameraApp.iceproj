@@ -25,13 +25,6 @@
     <Content Include="cordova.android.js" />
     <Content Include="cordova.ios.js" />
     <Content Include="cordova.wp8.js" />
-    <Content Include="images\01.jpg" />
-    <Content Include="images\02.jpg" />
-    <Content Include="images\03.jpg" />
-    <Content Include="images\04.jpg" />
-    <Content Include="images\05.jpg" />
-    <Content Include="images\06.jpg" />
-    <Content Include="images\07.jpg" />
     <Content Include="images\compass.png" />
     <Content Include="index.html" />
     <Content Include="kendo\js\jquery.min.js" />
@@ -44,9 +37,35 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="scripts\app.js" />
     <Content Include="scripts\compass.js" />
+    <Content Include="scripts\GetYear.js" />
+    <Content Include="scripts\login.js" />
+    <Content Include="scripts\maps.js" />
+    <Content Include="scripts\Todo.js" />
+    <Content Include="styles\images\avatar.png" />
+    <Content Include="styles\images\icon-add%402x.png" />
+    <Content Include="styles\images\icon-add.png" />
+    <Content Include="styles\images\icon-adsf%402x.png" />
+    <Content Include="styles\images\icon-adsf.png" />
+    <Content Include="styles\images\icon-arrow_left%402x.png" />
+    <Content Include="styles\images\icon-arrow_left.png" />
+    <Content Include="styles\images\icon-facebook%402x.png" />
+    <Content Include="styles\images\icon-facebook.png" />
+    <Content Include="styles\images\icon-google%402x.png" />
+    <Content Include="styles\images\icon-google.png" />
+    <Content Include="styles\images\icon-liveid%402x.png" />
+    <Content Include="styles\images\icon-liveid.png" />
+    <Content Include="styles\images\icon-password%402x.png" />
+    <Content Include="styles\images\icon-password.png" />
+    <Content Include="styles\images\icon-username%402x.png" />
+    <Content Include="styles\images\icon-username.png" />
+    <Content Include="styles\images\logo-telerik_devcloud%402x.png" />
+    <Content Include="styles\images\logo-telerik_devcloud.png" />
     <Content Include="styles\main.css" />
     <Content Include="views\compass.html" />
     <Content Include="views\gallery.html" />
+    <Content Include="views\maps.html" />
+    <Content Include="views\noApiKey.html" />
+    <Content Include="views\ToDo.html" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
@@ -98,6 +117,7 @@
     <Folder Include="Plugins\" />
     <Folder Include="scripts\" />
     <Folder Include="styles\" />
+    <Folder Include="styles\images\" />
     <Folder Include="views\" />
   </ItemGroup>
   <Import Project="$(IceniumTargets)Build.targets" />
