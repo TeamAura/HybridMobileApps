@@ -9,13 +9,12 @@ app.viewmodels = app.viewmodels || {};
         title: '',
         content: '',
         saveTodo: function () {
-            //backend serves
-            console.log("test add todo");
+            //backend serves            
             window.todos.push({
                 title: this.get('title'),
                 content: this.get('content')
             });
-
         }
     });
+       
 }(app.viewmodels));

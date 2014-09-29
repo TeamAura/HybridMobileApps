@@ -35,8 +35,13 @@
     <Content Include="kendo\styles\images\wp8_icons.png" />
     <Content Include="kendo\styles\images\wp8_inverseicons.png" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
+
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\connection.js" />
+
     <Content Include="scripts\app\add-todo.js" />
     <Content Include="scripts\app\app.js" />
+
     <Content Include="scripts\app\gallery.js" />
     <Content Include="scripts\app\compass.js" />
     <Content Include="scripts\app\settings.js" />
@@ -64,7 +69,9 @@
     <Content Include="styles\images\icon-username.png" />
     <Content Include="styles\images\images.jpg" />
     <Content Include="styles\main.css" />
+
     <Content Include="views\add-todo.html" />
+
     <Content Include="views\compass.html" />
     <Content Include="views\gallery.html" />
     <Content Include="views\maps.html" />
