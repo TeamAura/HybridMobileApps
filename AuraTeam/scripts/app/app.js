@@ -123,8 +123,6 @@ var app = (function (win) {
     var os = kendo.support.mobileOS,
         statusBarStyle = os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black';
 
-    // Initialize KendoUI mobile application
-
     var getYear = (function () {
         return new Date().getFullYear();
     }());

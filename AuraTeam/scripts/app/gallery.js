@@ -3,17 +3,13 @@ app.viewmodels = app.viewmodels || {};
 (function (scope) {
     var everlive = new Everlive("DexHTiBwelsCZOzh");
 
-    //var app = new kendo.mobile.Application(document.body, {
-    //    skin: "flat",
-    //    transition: "slide"
-    //})
-
-    function loadPhotos() {
-        //appSettings.everlive.apiKey.Files.get().then(function (data) {
+    function loadPhotos() {        
+        //return app.everlive.Files.get().then(function (data) {
         return everlive.Files.get().then(function (data) {
             var files = [];
+            
             data.result.forEach(function (image) {
-                files.push(image.Uri);
+                files.push();
             });
             return files;
         });
@@ -21,9 +17,6 @@ app.viewmodels = app.viewmodels || {};
     function show(e) {
         loadPhotos().
             then(function (files) {
-                //for (var i = 0, len = files.length; i < len; i++) {
-                //    files[i].deletePicture =
-                //}
 
                 var vm = kendo.observable({
                     files: files,
@@ -47,15 +40,15 @@ app.viewmodels = app.viewmodels || {};
                         };
                         navigator.camera.getPicture(success, error, config);
                     },
-                    deletePicture:  function () {
-                        alert("delete one")
-                    },
+                    //deletePicture:  function () {
+                    //    alert("delete one")
+                    //},
                     deleteAll: function () {
                         var query = new Everlive.Query();
                         query.where().gt('Length', 500);
                         everlive.Files.destroy(query,
                             function (data) {
-                                alert('Files successfully deleted.');
+                                alert('All Files successfully deleted.');
                                 loadPhotos();
                             },
                             function (error) {
@@ -70,7 +63,15 @@ app.viewmodels = app.viewmodels || {};
     scope.gallery = {
         show: show,
         deletePicture: function () {
-            alert("delete one")
+            //alert("File deleted");
+            var id = this.everlive.Files.Id;
+            everlive.Files.destroySingle({ Id: 'this.Id' },
+            function () {
+                alert('File successfully deleted.');
+            },
+            function (error) {
+                alert(JSON.stringify(error));
+            });
         },
     };
 }(app.viewmodels));
