@@ -1,5 +1,12 @@
-<div data-role="view" data-title="ToDo" data-model="listView" data-layout="default">
-    
-    Todo
-
+<div data-role="view"
+     data-title="ToDo"
+     data-model="listView"
+     data-layout="default"
+     data-show="app.viewmodels.todos">
+    <h1 data-bind="text: title"></h1>
+    <div data-role="listview"
+         data-bind="source: todos"
+         data-template="todo-item-template">
+    </div>
+    <a href="views/add-todo.html" data-role="button" class="btn-signup" data-icon="add">Add</a>
 </div>
