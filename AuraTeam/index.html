@@ -28,8 +28,10 @@
 
 <body id="main" onload="comp.bindCompassEvents(event); startWatchingGeolocation(event)">
     <div data-role="layout" data-id="default">
-        <div data-role="navbar">
-            <span data-role="view-title"></span>
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
         </div>
 
         <!--View content will render here-->
@@ -44,10 +46,7 @@
             </div>
         </div>
     </div>
-    <div data-role="view" data-title="Aura ToDo" data-model="listView" data-layout="default">
-        <div data-role="navbar">
-            <span data-role="view-title"></span>
-        </div>
+    <div data-role="view" data-title="Aura ToDo" data-layout="default">        
         <h1>Welcome!!!</h1>
         <!--login-->
         <div class="welcome-scrn form-view" data-model="app.Login" data-init="app.Login.init" data-show="app.Login.show">
@@ -60,7 +59,7 @@
             <ol class="group-wrp">
                 <li>
                     <span id="login" data-role="touch" data-bind="events: { tap: login }">
-                        <a data-role="button" class="btn btn-login">Enter</a>
+                        <a data-role=" button" class="btn btn-login">Enter</a>
                     </span>
                 </li>
                 <li class="oauth cf">
@@ -77,12 +76,14 @@
             </ol>
         </div>
 
-        <div data-role="listview"><p>&copy; <span data-bind="text: app.getYear"></span> Team Aura</p></div>
+        <div data-role="listview"><p>&copy; <span data-bind="text: getYear"></span> Team Aura</p></div>
 
         <!--template for images in galery-->
-        <script type="text/x-kendo-template" id="customTemplate">
-            <img src='#: data #'>
-            <button data-role="button" data-align="center" class="btn-delete" data-bind="click: deletePicture">Delete</button>
+        <script type="text/x-kendo-template" id="customTemplate" data-model="listView">
+            <div>
+                <img src='#: data #'>
+                <button data-align="center" class="btn-delete" onclick="## app.viewmodels.gallery.deletePicture()##">Delete</button>
+            </div>
         </script>
     </div>
 
