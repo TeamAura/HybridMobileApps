@@ -13,7 +13,8 @@ var app = (function () {
                     }).then(loadPhotos);
                 };
                 var error = function () {
-                    navigator.notification.alert("Unfortunately we could not add the image");                    
+                    navigator.vibrate();
+                    navigator.notification.alert("Unfortunately we could not add the image");
                 };
                 var config = {
                     destinationType: Camera.DestinationType.DATA_URL,

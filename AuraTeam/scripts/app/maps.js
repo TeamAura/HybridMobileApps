@@ -1,7 +1,7 @@
 function startWatchingGeolocation() {
     navigator.geolocation.watchPosition(geoWatchSuccess, geoWatchError, {
         enableHighAccuracy: true,
-        maximumAge: 1000
+        maximumAge: 300
     });
 }
 
@@ -12,10 +12,11 @@ function geoWatchSuccess(position) {
 
     var mapsBaseUrl = "http://maps.googleapis.com/maps/api/staticmap";
     var centerPar = "center=" + lat + "," + long;
-    var sizePar = "size=300x500";
+    var sizePar = "size=300x300";
 
     var locationViz = document.getElementById("location");
-    locationViz.src = mapsBaseUrl + "?" + centerPar + "&" + sizePar + "&" + "&sensor=true&zoom=12";
+    locationViz.src = mapsBaseUrl + "?" + centerPar + "&" + sizePar + "&" + "sensor=true&zoom=12";
+
     locationViz.style.webkitTransform = "rotate(" + (-heading | 0) + "deg)";    
     locationViz.style.transform = "rotate(" + (-heading | 0) + "deg)";
 }

@@ -3,7 +3,10 @@
 
 <head>
     <title>Aura ToDo</title>
-    <meta charset="utf-8">   
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
     <script src="cordova.js"></script>
@@ -11,15 +14,15 @@
     <script src="scripts/app/app.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/lib/everlive.all.min.js"></script>    
+    <script src="scripts/lib/everlive.all.min.js"></script>
     <script src="scripts/app/compass.js"></script>
     <script src="scripts/app/login.js"></script>
     <script src="scripts/app/maps.js"></script>
-    <script src="scripts/app/Todo.js"></script>    
-    <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>    
+    <script src="scripts/app/Todo.js"></script>
+    <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
 </head>
 
-<body id="main" onload="comp.bindCompassEvents(event)">
+<body id="main" onload="comp.bindCompassEvents(event); startWatchingGeolocation(event)">
     <div data-role="view" data-title="Aura ToDo" data-model="listView">
         <div data-role="navbar">
             <span data-role="view-title"></span>
