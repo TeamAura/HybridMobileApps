@@ -69,6 +69,10 @@ var app = (function (win) {
 
         navigator.splashscreen.hide();
         fixViewResize();
+        window.todos = [{
+            title: 'Initial',
+            isUrgent: true
+        }];
         var mobileApp = new kendo.mobile.Application(document.body, {
             transition: 'slide',
             statusBarStyle: statusBarStyle,

@@ -176,14 +176,6 @@
     background-image: url(images/icon-google.png);
 }
 
-#main .btn-login-liveid {
-    background-image: url(images/icon-liveid.png);
-}
-
-#main .btn-login-adsf {
-    background-image: url(images/icon-adsf.png);
-}
-
 #main .km-header .nav-button {
     display: inline-block;
     margin: 0;

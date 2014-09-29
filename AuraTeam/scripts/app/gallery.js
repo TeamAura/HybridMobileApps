@@ -9,7 +9,7 @@ app.viewmodels = app.viewmodels || {};
             var files = [];
             
             data.result.forEach(function (image) {
-                files.push();
+                files.push(image.Uri);
             });
             return files;
         });
@@ -63,15 +63,15 @@ app.viewmodels = app.viewmodels || {};
     scope.gallery = {
         show: show,
         deletePicture: function () {
-            //alert("File deleted");
-            var id = this.everlive.Files.Id;
-            everlive.Files.destroySingle({ Id: 'this.Id' },
-            function () {
-                alert('File successfully deleted.');
-            },
-            function (error) {
-                alert(JSON.stringify(error));
-            });
+            alert("File deleted");
+            //var id = this.everlive.Files.Id;
+            //everlive.Files.destroySingle({ Id: 'id' },
+            //function () {
+            //    alert('File successfully deleted.');
+            //},
+            //function (error) {
+            //    alert(JSON.stringify(error));
+            //});
         },
     };
 }(app.viewmodels));
