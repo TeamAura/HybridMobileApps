@@ -15,16 +15,31 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="scripts/lib/everlive.all.min.js"></script>
+
     <script src="scripts/app/gallery.js"></script>
+    <script src="scripts/app/signup.js"></script>
     <script src="scripts/app/compass.js"></script>
     <script src="scripts/app/login.js"></script>
+    <script src="scripts/app/users.js"></script>
     <script src="scripts/app/maps.js"></script>
     <script src="scripts/app/Todo.js"></script>
     <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
 </head>
 
 <body id="main" onload="comp.bindCompassEvents(event); startWatchingGeolocation(event)">
-    <div data-role="view" data-title="Aura ToDo" data-model="listView">
+    <div data-role="layout" id="default" data-id="default">
+        <!--View content will render here-->
+        <div data-role="footer">
+            <div data-role="tabstrip" class="tabstrip">
+                <a href="index.html" data-icon="home">Home</a>
+                <a href="views/gallery.html" data-icon="camera">Gallery</a>
+                <a href="views/compass.html" data-icon="globe">Compass</a>
+                <a href="views/Todo.html" data-icon="bookmarks">ToDo</a>
+                <a href="views/maps.html" data-icon="globe">Maps</a>
+            </div>
+        </div>
+    </div>
+    <div data-role="view" data-title="Aura ToDo" data-model="listView" data-layout="default">
         <div data-role="navbar">
             <span data-role="view-title"></span>
         </div>
@@ -57,17 +72,8 @@
             </ol>
         </div>
 
-        <div data-role="footer"><p>&copy; <span data-bind="text: app.getYear"></span> Team Aura</p></div>
+        <div data-role="listview"><p>&copy; <span data-bind="text: app.getYear"></span> Team Aura</p></div>
 
-        <div data-role="footer">
-            <div data-role="tabstrip" class="tabstrip">
-                <a href="index.html" data-icon="home">Home</a>
-                <a href="views/gallery.html" data-icon="camera">Gallery</a>
-                <a href="views/compass.html" data-icon="globe">Compass</a>
-                <a href="views/Todo.html" data-icon="bookmarks">ToDo</a>
-                <a href="views/maps.html" data-icon="globe">Maps</a>
-            </div>
-        </div>
         <!--template for images in galery-->
         <script type="text/x-kendo-template" id="customTemplate">
             <img src='#: data #'>
