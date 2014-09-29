@@ -3,7 +3,7 @@ var comp = (function () {
         navigator.compass.watchHeading(
             compassHeadingRetrieved,
             null, {
-                frequency: 1000
+                frequency: 3000
             });
     }
 

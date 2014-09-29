@@ -1,7 +1,7 @@
 function startWatchingGeolocation() {
     navigator.geolocation.watchPosition(geoWatchSuccess, geoWatchError, {
         enableHighAccuracy: true,
-        maximumAge: 300
+        maximumAge: 3000
     });
 }
 

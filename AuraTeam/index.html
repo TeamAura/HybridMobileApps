@@ -15,6 +15,7 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="scripts/lib/everlive.all.min.js"></script>
+    <script src="scripts/app/gallery.js"></script>
     <script src="scripts/app/compass.js"></script>
     <script src="scripts/app/login.js"></script>
     <script src="scripts/app/maps.js"></script>
@@ -70,7 +71,7 @@
         <!--template for images in galery-->
         <script type="text/x-kendo-template" id="customTemplate">
             <img src='#: data #'>
-            <button data-role="button" data-align="center" class="btn-delete">Delete</button>
+            <button data-role="button" data-align="center" class="btn-delete" data-bind="click: deletePicture">Delete</button>
         </script>
     </div>
 
