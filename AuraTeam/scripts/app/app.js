@@ -71,7 +71,7 @@ var app = (function (win) {
         fixViewResize();
         window.todos = [{
             title: 'Initial',
-            isUrgent: true
+            content: 'Test Content'
         }];
         var mobileApp = new kendo.mobile.Application(document.body, {
             transition: 'slide',

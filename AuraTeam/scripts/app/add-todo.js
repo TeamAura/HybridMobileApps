@@ -7,15 +7,15 @@ app.viewmodels = app.viewmodels || {};
     'use strict';
     scope.addTodo = kendo.observable({
         title: '',
-        isUrgent: false,
+        content: '',
         saveTodo: function () {
             //backend serves
+            console.log("test add todo");
             window.todos.push({
                 title: this.get('title'),
-                isUrgent: this.get('isUrgent')
+                content: this.get('content')
             });
 
-            app.mobileApp.navigate('views/todo.html');
         }
     });
 }(app.viewmodels));

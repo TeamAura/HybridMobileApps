@@ -1,14 +1,16 @@
 <div data-role="view"
      data-title="AddTodo"
-     data-model="listView"
      data-layout="default"
     data-model="app.viewmodels.addTodo">
     <h1>Add</h1>
-    <label for="tb-title">Title:</label>
+    <label style="display:block" for="tb-title">Title:</label>
     <input type="text" id="tb-title"
            data-bind="value: title" />
-    <input type="checkbox" data-bind="checked: isUrgent" />
-    <button data-role="button"
+    <label style="display:block" for="tb-title">Content:</label>
+    <input type="text" id="tb-content"
+           data-bind="value: content" />
+
+    <button style="display:block" data-role="button"
             data-bind="events: {click: saveTodo}">
         Save
     </button>
