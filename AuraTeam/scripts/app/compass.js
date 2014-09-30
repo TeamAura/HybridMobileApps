@@ -1,9 +1,11 @@
-var comp = (function () {    
+(function () {
+    document.addEventListener("deviceready", bindCompassEvents, false);
+
     function bindCompassEvents() {
         navigator.compass.watchHeading(
             compassHeadingRetrieved,
             null, {
-                frequency: 3000
+                frequency: 1000
             });
     }
 
@@ -12,11 +14,10 @@ var comp = (function () {
 
         var rotationStyleString = "rotate(" + -(heading.magneticHeading | 0) + "deg)"
 
-        // -webkit-transform: rotate(15deg)
-        sensorVizElement.style.webkitTransform = rotationStyleString;
-        sensorVizElement.style.transform = rotationStyleString;
+        if (sensorVizElement && sensorVizElement.style) {
+            sensorVizElement.style.webkitTransform = rotationStyleString;
+            sensorVizElement.style.transform = rotationStyleString;
+        }
     }
-    return {
-        bindCompassEvents: bindCompassEvents
-    };
+    
 }());

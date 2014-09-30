@@ -1,9 +1,9 @@
 var app = (function (win) {
     'use strict';
 
-    // Global error handling
+    // Global error handling   
     var showAlert = function (message, title, callback) {
-        navigator.notification.alert(message, callback || function () {
+        navigator.notification.alert(message, callback || function () {        
         }, title, 'OK');
     };
 
@@ -54,10 +54,7 @@ var app = (function (win) {
             };
 
             if (confirmed === true || confirmed === 1) {
-                // Stop EQATEC analytics monitor on app exit
-                if (analytics.isAnalytics()) {
-                    analytics.Stop();
-                }
+                
                 AppHelper.logout().then(exit, exit);
             }
         }, 'Exit', ['OK', 'Cancel']);
@@ -126,8 +123,6 @@ var app = (function (win) {
 
     var os = kendo.support.mobileOS,
         statusBarStyle = os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black';
-
-    // Initialize KendoUI mobile application
 
     var getYear = (function () {
         return new Date().getFullYear();
