@@ -13,8 +13,11 @@ var comp = (function () {
         var rotationStyleString = "rotate(" + -(heading.magneticHeading | 0) + "deg)"
 
         // -webkit-transform: rotate(15deg)
-        sensorVizElement.style.webkitTransform = rotationStyleString;
-        sensorVizElement.style.transform = rotationStyleString;
+
+        if (sensorVizElement && sensorVizElement.style) {
+            sensorVizElement.style.webkitTransform = rotationStyleString;
+            sensorVizElement.style.transform = rotationStyleString;
+        }
     }
     return {
         bindCompassEvents: bindCompassEvents

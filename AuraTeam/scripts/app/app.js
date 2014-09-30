@@ -1,9 +1,10 @@
 var app = (function (win) {
     'use strict';
 
-    // Global error handling
+    // Global error handling   
     var showAlert = function (message, title, callback) {
         navigator.notification.alert(message, callback || function () {
+        //alert(message, callback || function () {
         }, title, 'OK');
     };
 
@@ -54,10 +55,7 @@ var app = (function (win) {
             };
 
             if (confirmed === true || confirmed === 1) {
-                // Stop EQATEC analytics monitor on app exit
-                if (analytics.isAnalytics()) {
-                    analytics.Stop();
-                }
+                
                 AppHelper.logout().then(exit, exit);
             }
         }, 'Exit', ['OK', 'Cancel']);
