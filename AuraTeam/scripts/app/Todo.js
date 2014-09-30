@@ -1,5 +1,4 @@
 /* global window, kendo */
-
 var app = app || {};
 app.viewmodels = app.viewmodels || {};
 

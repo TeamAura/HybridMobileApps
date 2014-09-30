@@ -3,8 +3,7 @@ var app = (function (win) {
 
     // Global error handling   
     var showAlert = function (message, title, callback) {
-        navigator.notification.alert(message, callback || function () {
-        //alert(message, callback || function () {
+        navigator.notification.alert(message, callback || function () {        
         }, title, 'OK');
     };
 
@@ -124,8 +123,6 @@ var app = (function (win) {
 
     var os = kendo.support.mobileOS,
         statusBarStyle = os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black';
-
-    // Initialize KendoUI mobile application
 
     var getYear = (function () {
         return new Date().getFullYear();
