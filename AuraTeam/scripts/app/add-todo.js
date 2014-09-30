@@ -14,6 +14,10 @@ app.viewmodels = app.viewmodels || {};
                 title: this.get('title'),
                 content: this.get('content')
             });
+
+            document.getElementById('tb-title').value = '';
+            document.getElementById('tb-content').value = '';
+
         }
     });
        

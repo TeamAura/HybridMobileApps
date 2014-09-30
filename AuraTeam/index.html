@@ -25,6 +25,52 @@
     <script src="scripts/app/Todo.js"></script>
     <script src="scripts/app/add-todo.js"></script>
     <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
+
+    <style>
+        .add-todo{
+            height:2em;
+            width:80%;
+            align-self:center;
+            font-size:1.3em;
+            margin:8%;
+            padding-left:5%
+        }
+
+        .btn-signup{
+            
+            margin-left:10%;
+            height:2.5em;
+            width:25%;
+        }
+
+        .add-button{
+            margin-left:10%;
+            
+            width:25%;
+        }
+
+        .add-label{
+            font-size:1.2em;
+            margin-left:5%;
+        }
+
+        a.title{
+            margin-left:10%;
+            font-size:1.5em;
+            text-decoration:none;
+            color:#808080;
+        }
+
+        .content{
+            
+            border-bottom:1px solid black;
+            margin:5%;
+            font-size:1.3em;
+            color:#808080;
+        }
+        
+    </style>
+
 </head>
 
 <body id="main">
@@ -93,10 +139,10 @@
         <!--template for todo-->
         <script type="text/x-kendo-template"
                 id="todo-item-template">
-            <a style="display:block" data-role="button" href="index.html">
+            <a class="title" data-role="button" href="index.html">
                 #: title #
             </a>
-            <div>
+            <div class="content">
                 #: content #
             </div>
         </script>

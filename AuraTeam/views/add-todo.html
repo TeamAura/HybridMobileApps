@@ -1,16 +1,16 @@
 <div data-role="view"
-     data-title="AddTodo"     
-     data-layout="default"    
+     data-title="AddTodo"
+     data-layout="default"
      data-model="app.viewmodels.addTodo">
     <h1>Add</h1>
-    <label style="display: block" for="tb-title">Title:</label>
-    <input type="text" id="tb-title"
-           data-bind="value: title" />
-    <label style="display: block" for="tb-title">Content:</label>
-    <input type="text" id="tb-content"
-           data-bind="value: content" />
+    <label class="add-label" for="tb-title">Title:</label><br>
+    <input class="add-todo" type="text" id="tb-title"
+           data-bind="value: title" /><br>
+    <label class="add-label" for="tb-title">Content:</label><br>
+    <input class="add-todo" type="text" id="tb-content"
+           data-bind="value: content" /><br>
 
-    <button style="display: block" data-role="button"
+    <button data-role="button" class="add-button"
             data-bind="events: {click: saveTodo}">
         Save
     </button>
