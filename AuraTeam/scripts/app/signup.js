@@ -2,6 +2,7 @@ var app = app || {};
 
 app.Signup = (function () {
     'use strict';
+    var everlive = new Everlive("DexHTiBwelsCZOzh");
 
     var singupViewModel = (function () {
 
@@ -23,12 +24,16 @@ app.Signup = (function () {
 
             dataSource.BirthDate = birthDate;
 
-            Everlive.$.Users.register(
+            everlive.Users.register(
                 dataSource.Username,
                 dataSource.Password,
                 dataSource)
             .then(function () {
-                app.showAlert("Registration successful");
+                alert("Registration successful");
+                document.getElementById('signupName').value = '';
+                document.getElementById('signupEmail').value = '';
+                document.getElementById('signupUsername').value = '';
+                document.getElementById('signupPassword').value = '';
                 app.mobileApp.navigate('index.html');
             },
             function (err) {

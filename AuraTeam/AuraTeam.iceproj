@@ -35,18 +35,16 @@
     <Content Include="kendo\styles\images\wp8_icons.png" />
     <Content Include="kendo\styles\images\wp8_inverseicons.png" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
-
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\connection.js" />
-
     <Content Include="scripts\app\add-todo.js" />
     <Content Include="scripts\app\app.js" />
-
     <Content Include="scripts\app\gallery.js" />
     <Content Include="scripts\app\compass.js" />
     <Content Include="scripts\app\settings.js" />
     <Content Include="scripts\app\signup.js" />
     <Content Include="scripts\app\users.js" />
+    <Content Include="scripts\lib\angular.min.js" />
     <Content Include="scripts\lib\everlive.all.min.js" />
     <Content Include="scripts\app\login.js" />
     <Content Include="scripts\app\maps.js" />
@@ -68,10 +66,12 @@
     <Content Include="styles\images\icon-username%402x.png" />
     <Content Include="styles\images\icon-username.png" />
     <Content Include="styles\images\images.jpg" />
+    <Content Include="styles\kendo.common.min.css" />
+    <Content Include="styles\kendo.dataviz.default.min.css" />
+    <Content Include="styles\kendo.dataviz.min.css" />
+    <Content Include="styles\kendo.default.min.css" />
     <Content Include="styles\main.css" />
-
     <Content Include="views\add-todo.html" />
-
     <Content Include="views\compass.html" />
     <Content Include="views\gallery.html" />
     <Content Include="views\maps.html" />

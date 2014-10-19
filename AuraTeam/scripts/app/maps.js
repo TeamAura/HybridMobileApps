@@ -1,35 +1,57 @@
-(function () {
-    document.addEventListener("deviceready", startWatchingGeolocation, false);
+//(function () {
+//    document.addEventListener("deviceready", startWatchingGeolocation, false);
 
-    function startWatchingGeolocation() {
-        navigator.geolocation.watchPosition(geoWatchSuccess, geoWatchError, {
-            enableHighAccuracy: true,
-            maximumAge: 1000
-        });
-    }
+//    function startWatchingGeolocation() {
+//        //navigator.geolocation.watchPosition(geoWatchSuccess, geoWatchError, {
+//        //    enableHighAccuracy: false,
+//        //    maximumAge: 1000
+//        //});
+//    }
 
-    function geoWatchSuccess(position) {
-        var lat = position.coords.latitude;
-        var long = position.coords.longitude;
-        var heading = position.coords.heading;
+//    function geoWatchSuccess(position) {
+//        var lat = position.coords.latitude;
+//        var long = position.coords.longitude;
+//        var heading = position.coords.heading;
 
-        var mapsBaseUrl = "http://maps.googleapis.com/maps/api/staticmap";
-        var centerPar = "center=" + lat + "," + long;
-        var sizePar = "size=500x500";
+//        var mapsbaseurl = "http://maps.googleapis.com/maps/api/staticmap";
+//        //var mapsbaseurl = "http://maps.googleapis.com/maps/api/js?key=uzcyebcu_796eozclpksjhfs&sensor=true"
+//        var centerpar = "center=" + lat + "," + long;
+//        var sizepar = "size=300x300";
 
-        var locationViz = document.getElementById("location");
-        if (locationViz && locationViz.src) {
-            locationViz.src = mapsBaseUrl + "?" + centerPar + "&" + sizePar + "&" + "sensor=true&zoom=10";
-        }
+//        var locationviz = document.getelementbyid("location");
 
-        if (locationViz && locationViz.style) {
-            locationViz.style.webkitTransform = "rotate(" + (-heading | 0) + "deg)";
-            locationViz.style.transform = "rotate(" + (-heading | 0) + "deg)";
-        }
-    }
+//        locationviz.src = mapsbaseurl + "?" + centerpar + "&" + sizepar + "&" + "sensor=true&zoom=10";
+//        //locationviz.src = mapsbaseurl;
 
-    function geoWatchError(error) {
-        alert("error " + error)
-    }
+//        if (locationviz && locationviz.style) {
+//            locationviz.style.webkittransform = "rotate(" + (-heading | 0) + "deg)";
+//            locationviz.style.transform = "rotate(" + (-heading | 0) + "deg)";
+//        }
+//    }
 
-}());
+//    function geoWatchError(error) {
+//        alert("error " + error)
+//    }
+
+////}());
+//function createMap() {
+//    $("#map").kendoMap({
+//        center: [30.268107, -97.744821],
+//        zoom: 3,
+//        layers: [{
+//            type: "tile",
+//            urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+//            subdomains: ["a", "b", "c"],
+//            attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap contributors</a>"
+//        }],
+//        markers: [{
+//            location: [30.268107, -97.744821],
+//            shape: "pinTarget",
+//            tooltip: {
+//                content: "Austin, TX"
+//            }
+//        }]
+//    });
+//}
+
+//$(document).ready(createMap);
